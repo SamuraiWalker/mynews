@@ -10,7 +10,7 @@ class ProfileController extends Controller
     //PHP/Laravel08 ControllerとRoutingとの関係について 課題５
     public function add()
     {
-        return view('admin.profile.clreate');
+        return view('admin.profile.create');
     }
     public function create()
     {
@@ -18,7 +18,7 @@ class ProfileController extends Controller
     }
     public function edit()
     {
-        return view('admin');
+        return view('admin.profile.edit');
     }
     public function update()
     {
