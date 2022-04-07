@@ -17,6 +17,6 @@ Route::get('xxx','AAAController/@bbb');
 Route::group(['prefix' => 'admin'], function() {
     Route::get('news/create', 'Admin\NewsController@add');
     //PHP_Laravel09_Task4
-    Route::get('profile/create', 'Admin\PrfileController@add');
+    Route::get('profile/create', 'Admin\ProfileController@add');
     Route::get('profile/edit', 'Admin\ProfileController@edit');
 });
