@@ -12,21 +12,22 @@
 */
 
 //PHP_Laravel09_Task3
-Route::get('xxx','AAAController\@bbb');
+//Route::get('xxx','AAAController\@bbb');
 
-Route::group(['prefix' => 'admin'], function() {
-    Route::get('news/create', 'Admin\NewsController@add')->middleware('auth');
+Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
+    Route::get('news/create', 'Admin\NewsController@add');
+    Route::post('news/create', 'Admin\NewsController@create');
     //PHP_Laravel09_Task4
     //PHP_Laravel12_Task2
-    Route::get('profile/create', 'Admin\ProfileController@add')->middleware('auth');
+    //PHP_Laravel13_Task3
+    Route::get('profile/create', 'Admin\ProfileController@add');
+    Route::post('profile/create', 'Admin\ProfileController@create');
     //PHP_Laravel12_Task3
-    Route::get('profile/edit', 'Admin\ProfileController@edit')->middleware('auth');
+    Route::get('profile/edit', 'Admin\ProfileController@edit');
+    //PHP_Laravel13_task6
+    Route::post('profile/edit', 'Admin\ProfileController@update');
     // Route::get('news/create', 'Admin/NewsController@add')->middleware('auth');
 });
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
 
 Auth::routes();
 
