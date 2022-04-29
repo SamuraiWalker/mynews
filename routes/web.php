@@ -27,6 +27,11 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
     //PHP_Laravel13_task6
     Route::post('profile/edit', 'Admin\ProfileController@update');
     // Route::get('news/create', 'Admin/NewsController@add')->middleware('auth');
+    Route::get('news', 'Admin\NewsController@index');
+    // Laravel16 追記↓
+    route::get('news/edit', 'Admin\NewsController@edit');
+    route::post('news/edit', 'Admin\NewsController@update');
+    route::get('news/delete', 'Admin\NewsController@delete');
 });
 
 Auth::routes();

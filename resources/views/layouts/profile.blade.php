@@ -45,7 +45,7 @@
                         </ul>
 
                         <!-- Right Side Of Navbar -->
-                        //PHP_Laravel12_Task1
+                        {{-- PHP_Laravel12_Task1 --}}
                         <ul class="navbar-nav ml-auto">
                         
                         {{-- 以下を追記 --}}
