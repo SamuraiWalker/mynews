@@ -14,4 +14,9 @@ class News extends Model
         'title' => 'required',
         'body' => 'required',
     );
+    // Laravel17 以下を追記
+    public function histories()
+    {
+        return $this->hasMany('App\History');
+    }
 }

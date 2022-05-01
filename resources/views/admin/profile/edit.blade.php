@@ -61,7 +61,19 @@
                             <input type="submit" class="btn btn-primary" value="更新">
                         </div>
                     </div>
-                </form> 
+                </form>
+                <div class="row mt-5">
+                    <div class="col-md-4 mx-auto">
+                        <h2>編集履歴</h2>
+                        <ul class="list-group">
+                            @if ($profile_form->profileHistories != NULL)
+                                @foreach ($profile_form->profileHistories as $history)
+                                    <li class="list-group-item">{{ $history->edited_at }}</li>
+                                @endforeach
+                            @endif
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
