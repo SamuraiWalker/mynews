@@ -32,8 +32,15 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
     route::get('news/edit', 'Admin\NewsController@edit');
     route::post('news/edit', 'Admin\NewsController@update');
     route::get('news/delete', 'Admin\NewsController@delete');
+    
 });
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+// Laravel19 追記
+Route::get('/', 'NewsController@index');
+
+// Laravel19 課題２．
+Route::get('/profile', 'ProfileController@index');
